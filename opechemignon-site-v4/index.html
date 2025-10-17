@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ô Péché Mignon – Épicerie fine</title>
+  <meta name="description" content="Ô Péché Mignon – Épicerie fine à Gradignan : thés, cafés, chocolats, épicerie sucrée & salée, paniers garnis." />
+  <meta name="theme-color" content="#9E4624" />
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#9E4624;
+      --brand-strong:#7f341a;
+      --cream:#f8f3ee;
+      --ink:#2a1f1a;
+      --muted:#8b6f63;
+      --radius:18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);}
+    img{max-width:100%;height:auto;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px, 92vw);margin-inline:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(248,243,238,.8);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #00000010}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand img{width:42px;height:42px;border-radius:12px;object-fit:cover}
+    .nav a{padding:10px 12px;border-radius:10px}
+    .nav a:hover{background:#0000000a}
+    .cta{background:var(--brand);color:#fff;padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);font-weight:600}
+    .cta:hover{background:var(--brand-strong)}
+    .btn-ghost{border:1px solid #00000014;background:#fff}
+
+    .hero{padding:80px 0}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:10px;background:#ffffff;box-shadow:var(--shadow);padding:8px 12px;border-radius:999px;color:var(--brand);font-weight:700}
+    .title{font-family:"Playfair Display",serif;font-size: clamp(36px, 4.8vw, 64px);line-height:1.05;margin:12px 0}
+    .lead{font-size:18px;color:#4a3d37}
+    .hero-card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .hero-card img{border-radius:14px}
+
+    section{padding:64px 0}
+    h2{font-family:"Playfair Display",serif;font-size: clamp(28px, 4vw, 44px);margin:0 0 18px}
+    .sub{color:var(--muted);margin:0 0 28px}
+
+    .grid{display:grid;gap:20px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-4{grid-template-columns:repeat(4,1fr)}
+    @media (max-width: 900px){
+      .hero .wrap{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr 1fr}
+      .grid.cols-4{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 560px){
+      .grid.cols-3,.grid.cols-4{grid-template-columns:1fr}
+    }
+
+    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+    .card .content{padding:16px}
+    .chip{display:inline-block;background:var(--cream);border:1px solid rgba(0,0,0,.06);padding:6px 10px;border-radius:999px;font-size:12px;color:#6b554b}
+
+    .gallery img{aspect-ratio:4/3;object-fit:cover;border-radius:14px}
+
+    .cta-band{background:var(--brand);color:#fff;border-radius:22px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:var(--shadow)}
+
+    .hours{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .hours .box{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .list{display:grid;gap:10px}
+    .row{display:flex;justify-content:space-between;border-bottom:1px dashed #e7e0da;padding:8px 0}
+
+    footer{padding:40px 0;color:#806a60}
+    .foot{display:flex;justify-content:space-between;gap:12px;align-items:center}
+
+    .hero-logo{width: min(720px, 90%);aspect-ratio: 16/9;border-radius: 16px;overflow: hidden;box-shadow: var(--shadow);border:1px solid #00000010}
+    .hero-logo img{width:100%;height:100%;object-fit:cover}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Logo Ô Péché Mignon" />
+        <span>Ô Péché Mignon</span>
+      </div>
+      <nav>
+        <a href="#apropos">À propos</a>
+        <a href="#produits">Produits</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="badge">Épicerie fine • Gradignan</span>
+          <h1 class="title">Épicerie fine à Gradignan</h1>
+          <p class="lead">Sélection gourmande, thés & cafés de spécialité, chocolats artisanaux et cadeaux sur‑mesure. Venez découvrir nos pépites locales et d’ailleurs.</p>
+          <div style="display:flex;gap:12px;margin-top:22px">
+            <a href="#produits" class="cta">Découvrir nos produits</a>
+            <a href="#contact" class="btn-ghost cta" style="background:#fff;color:var(--brand)">Nous trouver</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-logo">
+            <img src="assets/logo_16x9.png" alt="Ô Péché Mignon – Logo 16:9" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos">
+      <div class="container">
+        <h2>À propos</h2>
+        <p class="sub">Chez Ô Péché Mignon, nous sélectionnons avec soin thés, cafés, chocolats et belles trouvailles d’épicerie, pour régaler les curieux comme les fins gourmets.</p>
+        <div class="cta-band">
+          <div>
+            <strong style="font-size:20px">Paniers cadeaux sur‑mesure</strong>
+            <div style="opacity:.9">Entreprises, évènements, attentions gourmandes : composez le coffret parfait.</div>
+          </div>
+          <a href="#contact" class="cta" style="background:#fff;color:var(--brand)">Demander un devis</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="produits">
+      <div class="container">
+        <h2>Produits phares</h2>
+        <p class="sub">Un aperçu de nos univers gourmands. Passez en boutique pour découvrir toutes nos références.</p>
+        <div class="grid cols-3">
+
+<article class="card">
+  <img src="https://images.unsplash.com/photo-1512850183-6d7990f42385?q=80&w=1200&auto=format&fit=crop" alt="Thés d’exception">
+  <div class="content">
+    <div class="chip">Thé</div>
+    <h3>Thés d’exception</h3>
+    <p>Grand crus, thés parfumés et infusions bio.</p>
+  </div>
+</article>
+
+
+<article class="card">
+  <img src="https://images.unsplash.com/photo-1525081905268-fc0b46e9d5c4?q=80&w=1200&auto=format&fit=crop" alt="Cafés de spécialité">
+  <div class="content">
+    <div class="chip">Café</div>
+    <h3>Cafés de spécialité</h3>
+    <p>Origines sélectionnées, torréfaction artisanale.</p>
+  </div>
+</article>
+
+
+<article class="card">
+  <img src="https://images.unsplash.com/photo-1483691278019-cb7253bee49f?q=80&w=1200&auto=format&fit=crop" alt="Chocolats artisanaux">
+  <div class="content">
+    <div class="chip">Chocolats</div>
+    <h3>Chocolats artisanaux</h3>
+    <p>Tablettes bean‑to‑bar, pralinés et ganaches.</p>
+  </div>
+</article>
+
+
+<article class="card">
+  <img src="https://images.unsplash.com/photo-1475855581698-724b0d98eac5?q=80&w=1200&auto=format&fit=crop" alt="Confiseries & douceurs">
+  <div class="content">
+    <div class="chip">Épicerie sucrée</div>
+    <h3>Confiseries & douceurs</h3>
+    <p>Confitures, miels, biscuits & pâtes à tartiner.</p>
+  </div>
+</article>
+
+
+<article class="card">
+  <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?q=80&w=1200&auto=format&fit=crop" alt="Huiles, condiments & plus">
+  <div class="content">
+    <div class="chip">Épicerie salée</div>
+    <h3>Huiles, condiments & plus</h3>
+    <p>Huiles d’olive, balsamiques, tartinables, pickles.</p>
+  </div>
+</article>
+
+
+<article class="card">
+  <img src="https://images.unsplash.com/photo-1541782818233-6d31b99a38e9?q=80&w=1200&auto=format&fit=crop" alt="Paniers garnis sur‑mesure">
+  <div class="content">
+    <div class="chip">Paniers garnis</div>
+    <h3>Paniers garnis sur‑mesure</h3>
+    <p>Compositions gourmandes personnalisées pour toutes les occasions.</p>
+  </div>
+</article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie">
+      <div class="container">
+        <h2>Galerie</h2>
+        <p class="sub">Ambiances de la boutique & sélections saisonnières.</p>
+        <div class="grid cols-3 gallery">
+<img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1400&auto=format&fit=crop" alt="Galerie">
+<img src="https://images.unsplash.com/photo-1481391032119-d89fee407e44?q=80&w=1400&auto=format&fit=crop" alt="Galerie">
+<img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1400&auto=format&fit=crop" alt="Galerie">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Horaires & Contact</h2>
+        <p class="sub">Passez nous voir ou écrivez‑nous pour toute demande.</p>
+        <div class="hours">
+          <div class="box">
+            <h3 style="margin-top:0">Boutique</h3>
+
+<div class="list">
+  <div class="row"><span>Lundi</span><strong>Fermé</strong></div>
+  <div class="row"><span>Mardi</span><strong>09:30 – 19:00</strong></div>
+  <div class="row"><span>Mercredi</span><strong>09:30 – 19:00</strong></div>
+  <div class="row"><span>Jeudi</span><strong>09:30 – 19:00</strong></div>
+  <div class="row"><span>Vendredi</span><strong>09:30 – 19:00</strong></div>
+  <div class="row"><span>Samedi</span><strong>09:30 – 12:00 &nbsp; / &nbsp; 15:30 – 19:00</strong></div>
+  <div class="row"><span>Dimanche</span><strong>Fermé</strong></div>
+</div>
+
+            <div style="margin-top:14px;color:#6b554b">14 allée des pins, 33170 Gradignan, Centre commercial Laurenzane</div>
+          </div>
+          <div class="box">
+            <h3 style="margin-top:0">Nous écrire</h3>
+            <form action="mailto:opechemignonboutique@gmail.com" method="post" enctype="text/plain">
+              <div style="display:grid;gap:10px">
+                <input required name="Nom" placeholder="Votre nom" style="padding:12px;border:1px solid #e8dfda;border-radius:12px" />
+                <input required type="email" name="Email" placeholder="Votre email" style="padding:12px;border:1px solid #e8dfda;border-radius:12px" />
+                <textarea required name="Message" rows="4" placeholder="Votre message" style="padding:12px;border:1px solid #e8dfda;border-radius:12px"></textarea>
+                <button class="cta" style="border:0;cursor:pointer">Envoyer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div style="margin-top:22px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)">
+<iframe title="Plan" src="https://www.google.com/maps?q=14%20all%C3%A9e%20des%20pins%2C%2033170%20Gradignan%2C%20Centre%20commercial%20Laurenzane&output=embed" style="border:0;width:100%;height:340px"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>© <span id="year"></span> Ô Péché Mignon</div>
+      <div class="social">
+        <a href="https://www.instagram.com/opechemignon_boutique/" aria-label="Instagram" title="Instagram">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61581172406110" aria-label="Facebook" title="Facebook">Facebook</a>
+        <a href="mailto:opechemignonboutique@gmail.com" aria-label="Email" title="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var id=a.getAttribute('href').slice(1);
+        var el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
